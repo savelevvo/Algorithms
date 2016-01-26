@@ -7,7 +7,7 @@
  * O(n^2)
 **/
 template<typename T>
-void swap(T *items, const int &lhs, const int &rhs)
+void swap(T *items, int lhs, int rhs)
 {
 	if (lhs != rhs)
 	{
@@ -17,7 +17,7 @@ void swap(T *items, const int &lhs, const int &rhs)
 	}
 }
 template<typename T>
-void bubble_sort(T *arr, const unsigned &lenght)
+void bubble_sort(T *arr, unsigned lenght)
 {
 	bool swapped;
 	do
@@ -40,7 +40,7 @@ void bubble_sort(T *arr, const unsigned &lenght)
 * O(n^2)
 **/
 template<typename T>
-int FindInsertionIndex(T *items, T value, const unsigned &length)
+int FindInsertionIndex(T *items, T value, unsigned length)
 {
 	for (unsigned i = 0; i < length; i++)
 		if (items[i] > value)
@@ -48,7 +48,7 @@ int FindInsertionIndex(T *items, T value, const unsigned &length)
 	// throw must be here...
 }
 template<typename T>
-void Insert(T *items, const unsigned &indexInsertAt, const unsigned &indexInsertFrom)
+void Insert(T *items, unsigned indexInsertAt, unsigned indexInsertFrom)
 {
 	T tmp = items[indexInsertAt];
 	items[indexInsertAt] = items[indexInsertFrom];
@@ -57,7 +57,7 @@ void Insert(T *items, const unsigned &indexInsertAt, const unsigned &indexInsert
 	items[indexInsertAt + 1] = tmp;
 }
 template<typename T>
-void insert_sort(T *items, const unsigned &length)
+void insert_sort(T *items, unsigned length)
 {
 	for (unsigned sortedRangeEndIndex = 1; sortedRangeEndIndex < length; sortedRangeEndIndex++)
 	{
@@ -75,7 +75,7 @@ void insert_sort(T *items, const unsigned &length)
 * O(n^2)
 **/
 template<typename T>
-int FindIndexOfSmallestFromIndex(T *items, const int &sortedRangeEnd, const int &length)
+int FindIndexOfSmallestFromIndex(T *items, int sortedRangeEnd, int length)
 {
 	T currentSmallest = items[sortedRangeEnd];
 	int currentSmallestindex = sortedRangeEnd;
@@ -90,7 +90,7 @@ int FindIndexOfSmallestFromIndex(T *items, const int &sortedRangeEnd, const int 
 	return currentSmallestindex;
 }
 template<typename T>
-void select_sort(T *items, const int &length)
+void select_sort(T *items, int length)
 {
 	for (int sortedRangeEnd = 0; sortedRangeEnd < length; sortedRangeEnd++)
 	{
@@ -134,7 +134,7 @@ void qs(T *items, int left, int right)
 	}
 }
 template<typename T>
-void quick_sort(T *items, const int &length)
+void quick_sort(T *items, int length)
 {
 	qs(items, 0, length - 1);
 }
