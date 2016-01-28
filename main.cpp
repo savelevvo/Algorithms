@@ -5,6 +5,7 @@ using std::cout;
 using std::endl;
 
 /* Сортировка слиянием [54] */
+/**/
 
 int main()
 {
